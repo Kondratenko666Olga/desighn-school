@@ -31,7 +31,7 @@ function LazyImage({ src, alt, className = '', ...props }) {
   return (
     <img
       ref={imgRef}
-      src={isVisible ? src : ''}
+      src={isVisible ? src : null}
       alt={alt}
       className={className}
       loading="lazy"
