@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -19,6 +20,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-style: 'Inter', sans-serif;
 }
 
 #root {
@@ -28,8 +30,49 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  font-weight: 800;
+}
+
+.title {
+  font-size: $title-fz;
+  line-height: $title-lh;
+  font-weight: $title-fw;
+}
+
+.subtitle {
+  font-size: $subtitle-fz;
+  line-height: $subtitle-lh;
+  font-weight: $subtitle-fw;
+}
+
+.text {
+  font-size: $text-sz;
+  line-height: $text-lh;
+  font-weight: $text-fw;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+  .title {
+    font-size: $title-fz-pc;
+  }
+  .subtstle {
+    font-size: $subtitle-fz-pc;
+  }
 }
