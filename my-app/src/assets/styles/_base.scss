@@ -14,7 +14,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-style: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 #root {
@@ -24,6 +24,21 @@ body {
 
 a {
   text-decoration: none;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
 }
 
 .container {

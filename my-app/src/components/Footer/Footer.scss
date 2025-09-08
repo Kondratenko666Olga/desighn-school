@@ -1,7 +1,57 @@
 @use '../../assets/styles/variables' as *;
 @use '../../assets/styles/mixins' as *;
+@use '../../assets/styles/base' as *;
 
 .footer {
   background: $footer-color;
   width: 100%;
+
+  &-inner {
+    padding: 36px 0;
+    color: $text-light;
+  }
+  &-main {
+    @include flex(column, center, center, 24px);
+
+    &__info {
+      @include flex(column, center, center, 12px);
+    }
+
+    &__links {
+      @include flex(row, space-around, center, 12px);
+      width: 100%;
+      &-wrapper {
+        @include flex(column, flex-start, flex-start, 12px);
+      }
+    }
+  }
+  &-links__title {
+    color: #98a2b3;
+  }
+  &-links__list {
+    @include flex(column, flex-start, flex-start, 8px);
+    a {
+      color: $text-light;
+
+      &:hover,
+      &:active {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &-bottom {
+    @include flex(column, flex-start, flex-start, 24px);
+    margin-top: 42px;
+    &__social {
+      @include flex(row, center, center, 18px);
+      width: 100%;
+    }
+    &__rights {
+      color: #98a2b3;
+      font-size: 14px;
+      text-align: center;
+      width: 100%;
+    }
+  }
 }
