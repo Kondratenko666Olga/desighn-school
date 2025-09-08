@@ -10,19 +10,19 @@ export const footerLinks = [
   {
     title: 'Company',
     links: [
-      { text: 'About us', link: '/' },
-      { text: 'Courses', link: 'courses' },
-      { text: 'Reviews', link: 'reviews' },
-      { text: 'FAQ’s', link: 'faq' },
+      { text: 'About us', link: '#about' },
+      { text: 'Courses', link: '#courses' },
+      { text: 'Reviews', link: '#reviews' },
+      { text: 'FAQ’s', link: '#faq' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { text: 'Terms', link: 'terms' },
-      { text: 'Privacy', link: 'privacy' },
-      { text: 'Cookies', link: 'cookies' },
-      { text: 'Contact', link: 'contact' },
+      { text: 'Terms', link: '#terms' },
+      { text: 'Privacy', link: '#privacy' },
+      { text: 'Cookies', link: '#cookies' },
+      { text: 'Contact', link: '#contact' },
     ],
   },
 ];
