@@ -1,6 +1,10 @@
 @use './variables' as *;
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+  font-size: 14px;
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -72,6 +76,9 @@ h1 {
 }
 
 @media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
   h1 {
     font-size: 42px;
   }

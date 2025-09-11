@@ -8,11 +8,26 @@ import Faq from './pages/Faq/Faq';
 import Home from './pages/Home/Home';
 import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
+import { useEffect, useState } from 'react';
+import Modal from './components/Modal/Modal';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isModalOpen]);
   return (
     <Router>
-      <Header />
+      <Header openModal={openModal} />
+      {isModalOpen && <Modal closeModal={closeModal} />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
