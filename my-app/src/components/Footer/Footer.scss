@@ -41,17 +41,36 @@
   }
 
   &-bottom {
-    @include flex(column, flex-start, flex-start, 24px);
+    @include flex(column, center, center, 24px);
     margin-top: 42px;
     &__social {
       @include flex(row, center, center, 18px);
+      max-width: 220px;
       width: 100%;
     }
     &__rights {
       color: #98a2b3;
       font-size: 14px;
-      text-align: center;
+      text-align: justify;
+      max-width: 300px;
       width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 42px 0;
+    &-main {
+      flex-direction: row;
+      &__info {
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+      }
+    }
+    &-bottom {
+      align-items: flex-start;
     }
   }
 }
